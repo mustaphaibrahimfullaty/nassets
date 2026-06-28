@@ -1,0 +1,13 @@
+config:
+  brief_level: complete
+stepsCompleted:
+  - step-01-init.md
+  - step-02-vision.md
+  - step-03-positioning.md
+  - step-05-business-model.md
+  - step-06-business-customers.md
+vision: >-
+  To launch a visually stunning, highly animated e-commerce e-bike platform within 3 weeks that captivates average consumers through seamless storefront interactions and a rich social community feed, managed via a futuristic, feature-dense Admin control panel.
+positioning: >-
+  For average, non-technical consumers who want to buy a premium e-bike online but struggle with the lack of trust and sensory experience of buying a vehicle from a screen, nassets is an immersive, community-driven e-commerce platform that builds high-trust confidence. Unlike flat, general e-commerce stores that offer static product listings without social proof or interaction, we bring the shopping experience to life by integrating custom 3D models and realistic horn and motor sounds with a feature-rich, interactive user community feed.
+businessModel: hybrid

@@ -94,4 +94,56 @@ Our WDS specifications must be highly structured, detailed, and clear on compone
 
 ---
 
+## Decision 5: Business Model & Monetization Channels
+
+**Date:** 2026-06-28
+**Step:** Phase 1 - Step 5 (Determine Business Model)
+**Session:** 1
+
+**Context:**
+Aligning on the monetization models and sales channels to guide both storefront UX and backend admin console capabilities.
+
+**What was decided:**
+Selected a Hybrid Business Model (B2B wholesale + B2C direct-to-consumer + in-person retail POS).
+
+**Why:**
+The business sells retail e-bikes to individual consumers (B2C) and bulk contracts to rental agencies/corporate fleets (B2B), and operates physical storefronts/events where sales agents must log offline sales.
+
+**Impact:**
+- Storefront must support B2C online checkout and B2B inquiries/bulk quote flows.
+- Admin panel must feature a robust Point of Sale (POS) interface and dynamic order management supporting online fulfillment and physical retail orders.
+
+**Alternatives considered:**
+- Pure B2C Direct-to-Consumer (DTC) model — rejected because it fails to capture bulk wholesale channels and retail storefront transactions.
+
+---
+
+## Decision 6: B2B Customer Profiles & Registration Types
+
+**Date:** 2026-06-28
+**Step:** Phase 1 - Step 6 (Identify Business Customers)
+**Session:** 1
+
+**Context:**
+Structuring the B2B portal entry points, user roles, and buying priorities for bulk/wholesale clients.
+
+**What was decided:**
+1. Registration splits into two options: **Individual** (B2C) or **Company** (B2B).
+2. Primary B2B buyers: Bike Shop Owners, Fleet Managers, and Corporate Procurement Officers.
+3. Designed specific B2B priorities:
+   - *Shop Owners:* Wholesale margins (tiered volume discounts).
+   - *Fleet Managers:* Durable product specifications, delivery tracking, and fleet warranty details.
+   - *Procurement Officers:* Formal invoice downloads and Net 30/60 offline/online payment terms.
+4. Business buyers get a dedicated **Company Dashboard** to manage profiles, track fleet orders, and participate in the community feed.
+5. All buyers (Individuals & Companies) can choose to buy directly online or click "Schedule a Meeting" to negotiate bulk/custom terms offline.
+
+**Why:**
+Enables standard B2B buyers to transact autonomously while maintaining high-touch sales options (meetings) for large custom fleet or corporate orders.
+
+**Impact:**
+- The storefront signup form will ask for Account Type (Individual vs. Company).
+- The User Dashboard expands into a Company Dashboard containing B2B-specific order histories and fleet invoice options, while preserving access to the social community feed.
+
+---
+
 _Continue appending decisions as they're made throughout the Product Brief process._
