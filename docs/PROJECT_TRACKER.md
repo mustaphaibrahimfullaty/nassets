@@ -4,30 +4,31 @@
 
 ### Foundation
 
-- [ ] Initialize Next.js
-- [ ] Configure Tailwind v4
-- [ ] Install Shadcn
-- [ ] Configure Theme Provider
-- [ ] Setup ESLint
-- [ ] Setup Prettier
+- [x] Initialize Next.js
+- [x] Configure Tailwind v4
+- [x] Install Shadcn
+- [x] Configure Theme Provider
+- [x] Setup ESLint
+- [x] Setup Prettier
 
 ---
 
 ## Design System
 
-- [ ] Colors
-- [ ] Typography
-- [ ] Icons
-- [ ] Shadows
-- [ ] Animations
-- [ ] Spacing
+- [x] Colors
+- [x] Typography
+- [x] Icons
+- [x] Shadows
+- [x] Animations
+- [x] Spacing
 
 ---
 
 ## Shared Components
 
-- [ ] Navbar
-- [ ] Footer
+- [x] Navbar
+- [x] Footer
+- [x] ThemeToggle
 - [ ] Button
 - [ ] Input
 - [ ] Modal
@@ -43,9 +44,9 @@
 
 ### Public
 
-- [ ] Homepage
-- [ ] Listing
-- [ ] Product Details
+- [x] Homepage
+- [x] Listing
+- [x] Product Details
 - [ ] Compare
 - [ ] Feed
 - [ ] Reviews

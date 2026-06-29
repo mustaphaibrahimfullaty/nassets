@@ -13,7 +13,7 @@ Stack:
 - Shadcn/UI
 
 Goal:
-Investor-ready premium e-bike ecommerce platform.
+Investor-ready premium electric motorcycle ecommerce platform.
 
 Modules:
 

@@ -1,10 +1,10 @@
 # Nassets
 
-## E-Bikes Made For Every Ride
+## electric motorcycles Made For Every Ride
 
 ## Overview
 
-Nassets is a premium e-bike discovery, comparison, and ecommerce platform that combines:
+Nassets is a premium electric motorcycle discovery, comparison, and ecommerce platform that combines:
 
 - Ecommerce Marketplace
 - Product Comparison Engine
@@ -19,7 +19,7 @@ The initial release is an investor-ready prototype built entirely using mock dat
 
 # Vision
 
-Become the leading digital platform for discovering, comparing, and purchasing premium electric bikes.
+Become the leading digital platform for discovering, comparing, and purchasing premium electric electric motorcycles.
 
 ---
 
@@ -48,7 +48,7 @@ Marketplace and community expansion.
 - TypeScript
 - TailwindCSS v4
 - Shadcn/UI
-- Lucide Icons
+- Lucide Icons / React Icons
 - Zustand
 - React Query
 - React Hook Form
