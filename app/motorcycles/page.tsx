@@ -12,9 +12,10 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Filter } from "lucide-react";
 
 export default function MotorcyclesPage() {
+  const maxPrice = Math.max(...motorcycles.map((m) => m.price)) + 5000;
   const [filters, setFilters] = useState<FilterState>({
     categories: [],
-    priceRange: [0, 40000],
+    priceRange: [0, maxPrice],
     brands: [],
   });
   const [sort, setSort] = useState<SortOption>("featured");
@@ -37,8 +38,6 @@ export default function MotorcyclesPage() {
     value: brand,
     count,
   }));
-
-  const maxPrice = Math.max(...motorcycles.map((m) => m.price)) + 5000;
 
   // Filter & Sort Logic
   const filteredMotorcycles = useMemo(() => {
@@ -82,7 +81,7 @@ export default function MotorcyclesPage() {
   }, [filters, sort]);
 
   return (
-    <div className="container py-20 md:py-20 px-4 md:px-8 max-w-7xl mx-auto">
+    <div className="container py-10 px-4 md:px-8 max-w-7xl mx-auto">
       <div className="flex flex-col mb-8 animate-fade-in-up">
         <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
           Discover <span className="gradient-text">Electric Motorcycles</span>

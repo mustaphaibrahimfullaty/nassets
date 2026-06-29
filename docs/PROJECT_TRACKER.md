@@ -29,7 +29,7 @@
 - [x] Navbar
 - [x] Footer
 - [x] ThemeToggle
-- [ ] Button
+- [x] Button
 - [ ] Input
 - [ ] Modal
 - [ ] Card

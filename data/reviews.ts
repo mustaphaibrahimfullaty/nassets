@@ -85,7 +85,7 @@ export const testimonials: Testimonial[] = [
     role: "Professional Racer",
     avatar: "",
     content:
-      "The Volt RS delivers performance that rivals the best ICE superbikes. The instant torque and predictable power delivery make it an absolute weapon on track days. Nassets is building the future of motorsport.",
+      "The Volt RS delivers performance that rivals the best ICE super engines. The instant torque and predictable power delivery make it an absolute weapon on track days. Nassets is building the future of motorsport.",
     rating: 5,
     motorcycle: "Volt RS",
   },
