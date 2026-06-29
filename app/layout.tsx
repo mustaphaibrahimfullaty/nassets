@@ -1,11 +1,23 @@
 import type { Metadata } from "next";
-import { Poppins, JetBrains_Mono, Inter } from "next/font/google";
+import { Geist, JetBrains_Mono, Inter } from "next/font/google";
 import "./globals.css";
+
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Navbar } from "@/components/shared/navbar";
+import { Footer } from "@/components/shared/footer";
+
 import { cn } from "@/lib/utils";
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-heading",
+});
 
 const fontMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -13,8 +25,8 @@ const fontMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nassets | Premium E-Bikes",
-  description: "Premium, visually-driven e-commerce platform for high-end e-bikes.",
+  title: "Nassets | Premium Electric Motorcycles",
+  description: "Premium, visually-driven e-commerce platform for high-end electric motorcycles.",
 };
 
 export default function RootLayout({
@@ -23,8 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={cn("font-sans", inter.variable)}>
-      <body className={`${inter.variable} ${fontMono.variable} antialiased`}>
+    <html lang="en" suppressHydrationWarning className={cn("font-sans", inter.variable, geist.variable)}>
+      <body className={cn("min-h-screen bg-background font-sans antialiased flex flex-col", inter.variable, geist.variable, fontMono.variable)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -32,7 +44,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TooltipProvider>
-            {children}
+            <Navbar />
+            <main className="flex-1 flex flex-col">
+              {children}
+            </main>
+            <Footer />
           </TooltipProvider>
         </ThemeProvider>
       </body>

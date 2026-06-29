@@ -10,7 +10,7 @@ Nassets
 
 # Goal
 
-Build an enterprise-grade e-bike marketplace prototype using mock data.
+Build an enterprise-grade electric motorcycle marketplace prototype using mock data.
 
 ---
 
@@ -93,7 +93,7 @@ Build an enterprise-grade e-bike marketplace prototype using mock data.
 
 ### Compare
 
-- Compare 4 Bikes
+- Compare 4 electric motorcycles
 - Save Comparison
 
 ---
