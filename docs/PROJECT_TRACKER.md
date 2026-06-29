@@ -28,14 +28,15 @@
 
 - [x] Navbar
 - [x] Footer
-- [x] Button
-- [x] Input
-- [x] Modal
-- [x] Card
-- [x] Drawer
-- [x] Tabs
-- [x] Pagination
-- [x] Empty States
+- [x] ThemeToggle
+- [ ] Button
+- [ ] Input
+- [ ] Modal
+- [ ] Card
+- [ ] Drawer
+- [ ] Tabs
+- [ ] Pagination
+- [ ] Empty States
 
 ---
 
@@ -43,9 +44,9 @@
 
 ### Public
 
-- [ ] Homepage
-- [ ] Listing
-- [ ] Product Details
+- [x] Homepage
+- [x] Listing
+- [x] Product Details
 - [ ] Compare
 - [ ] Feed
 - [ ] Reviews

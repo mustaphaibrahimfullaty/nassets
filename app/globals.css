@@ -25,9 +25,9 @@
   --input: #E2E8F0;
   --ring: #2563EB;
 
-  --font-sans: Inter, sans-serif;
-  --font-serif: Georgia, serif;
-  --font-mono: JetBrains Mono, monospace;
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Georgia", serif;
+  --font-mono: "JetBrains Mono", monospace;
 
   --radius: 0.875rem;
 
@@ -258,20 +258,14 @@
 
 /* Glass morphism effect */
 .glass {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(248, 250, 252, 0.7);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
-
 .dark .glass {
   background: rgba(15, 23, 42, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-:root .glass {
-  background: rgba(248, 250, 252, 0.7);
-  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 /* Animated gradient text */
@@ -308,7 +302,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+  background-image: radial-gradient(circle, currentcolor 1px, transparent 1px);
   background-size: 32px 32px;
   opacity: 0.03;
   pointer-events: none;

@@ -45,7 +45,7 @@ export default function RootLayout({
         >
           <TooltipProvider>
             <Navbar />
-            <main className="flex-1 flex flex-col">
+            <main className="flex-1 flex flex-col pt-20">
               {children}
             </main>
             <Footer />
