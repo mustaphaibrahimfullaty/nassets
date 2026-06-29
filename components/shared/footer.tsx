@@ -23,7 +23,7 @@ export function Footer() {
     <footer className="bg-card border-t border-border mt-auto pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
-          
+
           {/* Brand & Newsletter Section */}
           <div className="lg:col-span-4 space-y-6">
             <Link href="/" className="flex items-center gap-2 group w-fit">
@@ -34,7 +34,7 @@ export function Footer() {
                 Nassets
               </span>
             </Link>
-            
+
             <p className="text-muted-foreground max-w-sm">
               Discover the future of riding. Premium electric motorcycles designed for performance, sustainability, and unparalleled thrill.
             </p>
@@ -42,12 +42,12 @@ export function Footer() {
             <div className="space-y-3 pt-4">
               <h4 className="font-semibold text-sm">Join our newsletter</h4>
               <div className="flex items-center max-w-md">
-                <Input 
-                  type="email" 
-                  placeholder="Enter your email" 
-                  className="rounded-r-none focus-visible:ring-0 focus-visible:ring-offset-0 border-r-0 bg-background"
+                <Input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="h-10 rounded-r-none focus-visible:ring-0 focus-visible:ring-offset-0 border-r-0 bg-background"
                 />
-                <Button type="submit" className="rounded-l-none px-6">
+                <Button type="submit" className="h-10 rounded-l-none px-6">
                   Subscribe
                 </Button>
               </div>
@@ -64,7 +64,7 @@ export function Footer() {
                 <ul className="space-y-3">
                   {section.links.map((link) => (
                     <li key={link.label}>
-                      <Link 
+                      <Link
                         href={link.href}
                         className="text-muted-foreground hover:text-primary transition-colors text-sm"
                       >
@@ -83,7 +83,7 @@ export function Footer() {
           <p className="text-sm text-muted-foreground text-center md:text-left">
             &copy; {currentYear} Nassets. All rights reserved.
           </p>
-          
+
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => (
               <a

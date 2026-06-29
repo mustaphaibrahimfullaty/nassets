@@ -23,22 +23,22 @@ export function MotorcycleCard({ motorcycle }: MotorcycleCardProps) {
 
   const formattedOriginalPrice = originalPrice
     ? new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD",
-        maximumFractionDigits: 0,
-      }).format(originalPrice)
+      style: "currency",
+      currency: "USD",
+      maximumFractionDigits: 0,
+    }).format(originalPrice)
     : null;
 
   return (
-    <Card className="group flex flex-col overflow-hidden border-border/50 bg-card/50 transition-all hover:border-primary/50 card-hover-lift">
-      <Link href={`/motorcycles/${slug}`} className="relative aspect-[4/3] overflow-hidden bg-muted group-hover:opacity-90 transition-opacity">
+    <Card className="group flex flex-col overflow-hidden border-border/50 bg-card/50 transition-all hover:border-primary/50 card-hover-lift pt-0">
+      <Link href={`/motorcycles/${slug}`} className="relative aspect-4/3 overflow-hidden bg-muted group-hover:opacity-90 transition-opacity">
         {/* Fallback gradient background behind the image */}
         <div className="absolute inset-0 mesh-gradient opacity-50 z-0"></div>
-        
-        <Image 
-          src={thumbnail} 
-          alt={name} 
-          fill 
+
+        <Image
+          src={thumbnail}
+          alt={name}
+          fill
           className="object-cover z-10"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
@@ -47,7 +47,7 @@ export function MotorcycleCard({ motorcycle }: MotorcycleCardProps) {
           {isNew && <Badge variant="default" className="bg-primary text-primary-foreground">New</Badge>}
           {isFeatured && <Badge variant="secondary" className="bg-accent-cyan/20 text-accent-cyan border-accent-cyan/30">Featured</Badge>}
         </div>
-        
+
         <div className="absolute top-3 right-3 z-20">
           <Badge variant="outline" className="bg-background/80 backdrop-blur-md font-semibold">
             {formattedPrice}
@@ -70,7 +70,7 @@ export function MotorcycleCard({ motorcycle }: MotorcycleCardProps) {
         </div>
       </CardHeader>
 
-      <CardContent className="p-4 pt-0 flex-grow">
+      <CardContent className="p-4 pt-0 grow">
         <p className="text-sm text-muted-foreground line-clamp-2 mt-2 mb-4">
           {motorcycle.shortDescription}
         </p>
@@ -89,7 +89,7 @@ export function MotorcycleCard({ motorcycle }: MotorcycleCardProps) {
             <span>{specs.horsepower} HP</span>
           </div>
           <div className="flex items-center gap-1.5 text-muted-foreground">
-             <div className="w-3.5 h-3.5 rounded-full border border-current flex items-center justify-center text-[8px] font-bold">0</div>
+            <div className="w-3.5 h-3.5 rounded-full border border-current flex items-center justify-center text-[8px] font-bold">0</div>
             <span>{specs.zeroToSixty}</span>
           </div>
         </div>
@@ -106,7 +106,7 @@ export function MotorcycleCard({ motorcycle }: MotorcycleCardProps) {
             {formattedPrice}
           </span>
         </div>
-        <Button size="sm" asChild className="rounded-full px-6">
+        <Button size="sm" asChild className="rounded-full px-6 mt-4">
           <Link href={`/motorcycles/${slug}`}>View Details</Link>
         </Button>
       </CardFooter>
