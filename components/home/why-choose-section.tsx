@@ -29,21 +29,21 @@ export function WhyChooseSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-          {whyChooseFeatures.map((feature, index) => (
+          {whyChooseFeatures.map((feature) => (
             <div 
               key={feature.title}
-              className="flex gap-6 p-8 rounded-3xl bg-card border border-border hover:shadow-glow transition-all duration-300 group"
+              className="flex flex-col items-center gap-5 rounded-3xl border border-border bg-card p-6 text-center transition-all duration-300 hover:shadow-glow sm:flex-row sm:items-start sm:gap-6 sm:p-8 sm:text-left group"
             >
-              <div className="flex-shrink-0 mt-1">
+              <div className="flex-shrink-0 sm:mt-1">
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300 shadow-sm">
                   {getFeatureIcon(feature.iconName)}
                 </div>
               </div>
-              <div className="space-y-3">
-                <h3 className="text-xl font-semibold font-heading text-foreground">
+              <div className="max-w-prose space-y-3">
+                <h3 className="text-xl font-semibold font-heading text-foreground leading-tight">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-pretty">
                   {feature.description}
                 </p>
               </div>

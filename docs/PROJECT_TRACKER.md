@@ -85,6 +85,12 @@
 
 ---
 
+## Responsive UI Polish
+
+- [x] Improved mobile responsiveness for Why Choose Electric feature cards
+
+---
+
 ## Production Preparation
 
 - [ ] API Layer
