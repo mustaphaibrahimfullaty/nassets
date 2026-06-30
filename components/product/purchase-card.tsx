@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { Motorcycle } from "@/types";
+import { useCartStore } from "@/store/use-cart-store";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -16,6 +18,7 @@ interface PurchaseCardProps {
 export function PurchaseCard({ motorcycle }: PurchaseCardProps) {
   const [selectedColor, setSelectedColor] = useState(motorcycle.colorOptions[0]);
   const [isSaved, setIsSaved] = useState(false);
+  const { addItem } = useCartStore();
 
   const formattedPrice = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -96,7 +99,13 @@ export function PurchaseCard({ motorcycle }: PurchaseCardProps) {
         <Separator className="bg-border/50" />
 
         <div className="space-y-4">
-          <Button className="w-full h-14 text-lg font-bold rounded-xl shadow-glow transition-all hover:scale-[1.02]">
+          <Button 
+            className="w-full h-14 text-lg font-bold rounded-xl shadow-glow transition-all hover:scale-[1.02]"
+            onClick={() => {
+              addItem({ motorcycleId: motorcycle.id, color: selectedColor, quantity: 1 });
+              toast.success(`${motorcycle.name} added to cart`);
+            }}
+          >
             Add to Cart
           </Button>
           <Button variant="outline" className="w-full h-12 rounded-xl">

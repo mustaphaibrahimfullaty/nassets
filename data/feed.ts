@@ -1,0 +1,53 @@
+import { FeedPost } from "@/types";
+import { users } from "./users";
+
+export const feedPosts: FeedPost[] = [
+  {
+    id: "post_1",
+    userId: users[0].id,
+    userName: users[0].name,
+    userAvatar: users[0].avatar,
+    content: "Just took delivery of my new Zero SR/S! The acceleration is absolutely mind-blowing compared to my old gas bike. Best decision ever. ⚡️🏍️",
+    images: ["https://images.unsplash.com/photo-1558981285-6f0c94958bb6?q=80&w=1000&auto=format&fit=crop"],
+    likes: 124,
+    comments: 18,
+    shares: 5,
+    createdAt: "2024-06-28T14:30:00Z",
+  },
+  {
+    id: "post_2",
+    userId: users[2].id,
+    userName: "Nassets Official",
+    userAvatar: users[2].avatar,
+    content: "We're thrilled to announce that the new 2025 Energica models will be arriving on our platform next week. Get ready to experience unparalleled electric performance.",
+    images: ["https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1000&auto=format&fit=crop"],
+    likes: 856,
+    comments: 142,
+    shares: 89,
+    createdAt: "2024-06-27T09:00:00Z",
+  },
+  {
+    id: "post_3",
+    userId: users[1].id,
+    userName: users[1].name,
+    userAvatar: users[1].avatar,
+    content: "Does anyone have recommendations for Level 2 home chargers? Looking for something smart and reliable for my garage setup.",
+    images: [],
+    likes: 34,
+    comments: 26,
+    shares: 1,
+    createdAt: "2024-06-26T18:45:00Z",
+  },
+  {
+    id: "post_4",
+    userId: users[3].id,
+    userName: users[3].name,
+    userAvatar: users[3].avatar,
+    content: "Weekend ride through the canyons. The silence of the electric motor lets you really connect with the environment. Nature and machine in perfect harmony.",
+    images: ["https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?q=80&w=1000&auto=format&fit=crop"],
+    likes: 210,
+    comments: 42,
+    shares: 12,
+    createdAt: "2024-06-24T11:20:00Z",
+  },
+];

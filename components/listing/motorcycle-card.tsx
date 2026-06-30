@@ -95,7 +95,7 @@ export function MotorcycleCard({ motorcycle }: MotorcycleCardProps) {
         </div>
       </CardContent>
 
-      <CardFooter className="p-4 pt-0 border-t border-border/10 mt-auto flex items-center justify-between gap-4">
+      <CardFooter className="p-4 border-t border-border/10 mt-auto flex items-center justify-between gap-4">
         <div className="flex flex-col">
           {originalPrice && (
             <span className="text-xs text-muted-foreground line-through decoration-destructive/50">
@@ -106,7 +106,7 @@ export function MotorcycleCard({ motorcycle }: MotorcycleCardProps) {
             {formattedPrice}
           </span>
         </div>
-        <Button size="sm" asChild className="rounded-full px-6 mt-4">
+        <Button size="sm" asChild className="rounded-full p-4">
           <Link href={`/motorcycles/${slug}`}>View Details</Link>
         </Button>
       </CardFooter>

@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Search, ShoppingCart, User, Menu, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -34,19 +35,19 @@ export function Navbar() {
           : "bg-transparent py-5"
       )}
     >
-      <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
+      <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="bg-primary text-primary-foreground p-1.5 rounded-md group-hover:scale-105 transition-transform duration-300">
-            <Zap size={20} strokeWidth={2.5} />
-          </div>
-          <span className="font-heading font-bold text-xl tracking-tight">
-            Nassets
-          </span>
+          <Image
+            src="/brand/nassets-full-logo.png"
+            alt="Nassets"
+            width={200}
+            height={150}
+          />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-6">
           {mainNavItems.map((item) => {
             const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
             return (
@@ -68,7 +69,7 @@ export function Navbar() {
         </nav>
 
         {/* Desktop Actions */}
-        <div className="hidden md:flex items-center gap-2">
+        <div className="hidden lg:flex items-center gap-2">
           <Button variant="ghost" className="rounded-full w-10 h-10 hover:bg-primary/10 bg-foreground text-background">
             <Search className="w-5 h-5" />
             <span className="sr-only">Search</span>
@@ -93,7 +94,7 @@ export function Navbar() {
         </div>
 
         {/* Mobile Menu Trigger */}
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
           <Button variant="ghost" className="relative rounded-full w-10 h-10 hover:bg-primary/10 bg-foreground text-background">
             <ShoppingCart className="w-5 h-5" />
             <Badge className="absolute -top-1 -right-1 h-4 w-4 flex items-center justify-center p-0 rounded-full text-[9px]">

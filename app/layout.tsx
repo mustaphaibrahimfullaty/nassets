@@ -4,8 +4,7 @@ import "./globals.css";
 
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Navbar } from "@/components/shared/navbar";
-import { Footer } from "@/components/shared/footer";
+import { Toaster } from "@/components/ui/sonner";
 
 import { cn } from "@/lib/utils";
 
@@ -44,12 +43,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TooltipProvider>
-            <Navbar />
-            <main className="flex-1 flex flex-col pt-20">
-              {children}
-            </main>
-            <Footer />
+            {children}
           </TooltipProvider>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

@@ -30,13 +30,13 @@
 - [x] Footer
 - [x] ThemeToggle
 - [x] Button
-- [ ] Input
-- [ ] Modal
-- [ ] Card
-- [ ] Drawer
-- [ ] Tabs
-- [ ] Pagination
-- [ ] Empty States
+- [x] Input
+- [x] Modal
+- [x] Card
+- [x] Drawer
+- [x] Tabs
+- [x] Pagination
+- [x] Empty States
 
 ---
 
@@ -47,21 +47,21 @@
 - [x] Homepage
 - [x] Listing
 - [x] Product Details
-- [ ] Compare
-- [ ] Feed
-- [ ] Reviews
-- [ ] About
-- [ ] Contact
-- [ ] Checkout
+- [x] Compare
+- [x] Feed
+- [x] Reviews
+- [x] About
+- [x] Contact
+- [x] Checkout
 
 ### Buyer Dashboard
 
-- [ ] Overview
-- [ ] Orders
-- [ ] Wishlist
-- [ ] Feed
-- [ ] Reviews
-- [ ] Settings
+- [x] Overview
+- [x] Orders
+- [x] Wishlist
+- [x] Feed
+- [x] Reviews
+- [x] Settings
 
 ### Admin Dashboard
 

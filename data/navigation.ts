@@ -16,19 +16,24 @@ export const mainNavItems: NavItem[] = [
     description: "Compare models side by side",
   },
   {
-    label: "Reviews",
-    href: "/reviews",
-    description: "Real rider experiences",
-  },
-  {
     label: "Community",
-    href: "/community",
+    href: "/feed",
     description: "Join the conversation",
   },
   {
     label: "About",
     href: "/about",
     description: "Our mission and story",
+  },
+  {
+    label: "Reviews",
+    href: "/reviews",
+    description: "Real rider experiences",
+  },
+  {
+    label: "Contact",
+    href: "/contact",
+    description: "Contact us now",
   },
 ];
 
