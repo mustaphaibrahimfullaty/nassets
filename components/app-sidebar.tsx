@@ -89,6 +89,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   alt="Nassets"
                   width={100}
                   height={100}
+                  className="dark:grayscale dark:invert"
                 />
               </Link>
             </SidebarMenuButton>
