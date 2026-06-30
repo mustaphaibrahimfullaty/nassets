@@ -65,12 +65,12 @@
 
 ### Admin Dashboard
 
-- [ ] Analytics
-- [ ] Products
-- [ ] Orders
-- [ ] Users
-- [ ] Reports
-- [ ] CMS
+- [x] Analytics
+- [x] Products
+- [x] Orders
+- [x] Users
+- [x] Reports
+- [x] CMS
 
 ---
 
