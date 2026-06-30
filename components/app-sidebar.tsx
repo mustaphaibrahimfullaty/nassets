@@ -87,8 +87,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 <Image
                   src="/brand/nassets-full-logo.png"
                   alt="Nassets"
-                  width={100}
-                  height={100}
+                  width={200}
+                  height={150}
                   className="dark:grayscale dark:invert"
                 />
               </Link>
