@@ -43,6 +43,7 @@ export function Navbar() {
             alt="Nassets"
             width={200}
             height={150}
+            className="dark:grayscale dark:invert"
           />
         </Link>
 
