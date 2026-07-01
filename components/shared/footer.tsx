@@ -2,8 +2,9 @@ import Link from "next/link";
 import { footerSections, socialLinks } from "@/data/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Zap, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { FaTwitter, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
+import Image from "next/image";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -26,13 +27,14 @@ export function Footer() {
 
           {/* Brand & Newsletter Section */}
           <div className="lg:col-span-4 space-y-6">
-            <Link href="/" className="flex items-center gap-2 group w-fit">
-              <div className="bg-primary text-primary-foreground p-1.5 rounded-md group-hover:scale-105 transition-transform duration-300">
-                <Zap size={20} strokeWidth={2.5} />
-              </div>
-              <span className="font-heading font-bold text-2xl tracking-tight">
-                Nassets
-              </span>
+            <Link href="/" className="flex items-center w-fit">
+              <Image
+                src="/brand/nassets-full-logo.png"
+                alt="Nassets"
+                width={500}
+                height={150}
+                className="h-auto w-44 dark:grayscale dark:invert"
+              />
             </Link>
 
             <p className="text-muted-foreground max-w-sm">
