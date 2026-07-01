@@ -88,6 +88,7 @@
 ## Responsive UI Polish
 
 - [x] Improved mobile responsiveness for Why Choose Electric feature cards
+- [x] Added brand logo assets to mobile navigation sheet and footer
 
 ---
 

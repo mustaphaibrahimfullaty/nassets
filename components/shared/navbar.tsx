@@ -7,8 +7,8 @@ import { mainNavItems } from "@/data/navigation";
 import { ThemeToggle } from "@/components/shared/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Search, ShoppingCart, User, Menu, Zap } from "lucide-react";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { Search, ShoppingCart, User, Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -111,14 +111,16 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px] flex flex-col p-0">
+              <SheetTitle className="sr-only">Mobile navigation menu</SheetTitle>
               <div className="p-6 border-b flex items-center justify-between">
-                <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                  <div className="bg-primary text-primary-foreground p-1.5 rounded-md">
-                    <Zap size={20} strokeWidth={2.5} />
-                  </div>
-                  <span className="font-heading font-bold text-xl tracking-tight">
-                    Nassets
-                  </span>
+                <Link href="/" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Image
+                    src="/brand/logo.png"
+                    alt="Nassets"
+                    width={2000}
+                    height={2000}
+                    className="size-12 dark:grayscale dark:invert"
+                  />
                 </Link>
                 <ThemeToggle />
               </div>
