@@ -7,8 +7,8 @@ export const motorcycles: Motorcycle[] = [
     slug: "volt-rs",
     brand: "Nassets",
     category: "sport",
-    price: 24999,
-    originalPrice: 27999,
+    price: 4500000,
+    originalPrice: 5000000,
     images: ["/images/motorcycles/volt-rs-1.jpg", "/images/motorcycles/volt-rs-2.jpg"],
     thumbnail: "/images/motorcycles/volt-rs-1.jpg",
     description:
@@ -41,7 +41,7 @@ export const motorcycles: Motorcycle[] = [
     slug: "thunder-gt",
     brand: "Nassets",
     category: "cruiser",
-    price: 19999,
+    price: 3800000,
     images: ["/images/motorcycles/thunder-gt-1.jpg"],
     thumbnail: "/images/motorcycles/thunder-gt-1.jpg",
     description:
@@ -73,8 +73,8 @@ export const motorcycles: Motorcycle[] = [
     slug: "apex-x",
     brand: "Nassets",
     category: "adventure",
-    price: 22499,
-    originalPrice: 24999,
+    price: 4200000,
+    originalPrice: 4700000,
     images: ["/images/motorcycles/apex-x-1.jpg"],
     thumbnail: "/images/motorcycles/apex-x-1.jpg",
     description:
@@ -107,7 +107,7 @@ export const motorcycles: Motorcycle[] = [
     slug: "pulse-3",
     brand: "Nassets",
     category: "urban",
-    price: 12999,
+    price: 1500000,
     images: ["/images/motorcycles/pulse-3-1.jpg"],
     thumbnail: "/images/motorcycles/pulse-3-1.jpg",
     description:
@@ -139,7 +139,7 @@ export const motorcycles: Motorcycle[] = [
     slug: "storm-touring",
     brand: "Nassets",
     category: "touring",
-    price: 27999,
+    price: 5200000,
     images: ["/images/motorcycles/storm-touring-1.jpg"],
     thumbnail: "/images/motorcycles/storm-touring-1.jpg",
     description:
@@ -170,7 +170,7 @@ export const motorcycles: Motorcycle[] = [
     slug: "viper-mx",
     brand: "Nassets",
     category: "offroad",
-    price: 16999,
+    price: 3200000,
     images: ["/images/motorcycles/viper-mx-1.jpg"],
     thumbnail: "/images/motorcycles/viper-mx-1.jpg",
     description:
@@ -202,7 +202,7 @@ export const motorcycles: Motorcycle[] = [
     slug: "eclipse-s",
     brand: "Nassets",
     category: "sport",
-    price: 29999,
+    price: 5800000,
     images: ["/images/motorcycles/eclipse-s-1.jpg"],
     thumbnail: "/images/motorcycles/eclipse-s-1.jpg",
     description:
@@ -234,7 +234,7 @@ export const motorcycles: Motorcycle[] = [
     slug: "horizon-c",
     brand: "Nassets",
     category: "cruiser",
-    price: 21499,
+    price: 4000000,
     images: ["/images/motorcycles/horizon-c-1.jpg"],
     thumbnail: "/images/motorcycles/horizon-c-1.jpg",
     description:

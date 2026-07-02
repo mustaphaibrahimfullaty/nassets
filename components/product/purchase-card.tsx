@@ -11,6 +11,8 @@ import { Separator } from "@/components/ui/separator";
 import { Check, Heart, Share2, ShieldCheck, Truck } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+import { formatPrice } from "@/services/motorcycle-service";
+
 interface PurchaseCardProps {
   motorcycle: Motorcycle;
 }
@@ -20,11 +22,7 @@ export function PurchaseCard({ motorcycle }: PurchaseCardProps) {
   const [isSaved, setIsSaved] = useState(false);
   const { addItem } = useCartStore();
 
-  const formattedPrice = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    maximumFractionDigits: 0,
-  }).format(motorcycle.price);
+  const formattedPrice = formatPrice(motorcycle.price);
 
   return (
     <Card className="sticky top-24 overflow-hidden border-border/50 bg-card/80 backdrop-blur-xl shadow-elevated">
@@ -32,9 +30,9 @@ export function PurchaseCard({ motorcycle }: PurchaseCardProps) {
         <div>
           <div className="flex items-start justify-between mb-2">
             <h1 className="text-3xl font-extrabold tracking-tight">{motorcycle.name}</h1>
-            <Button 
-              variant="ghost" 
-              size="icon" 
+            <Button
+              variant="ghost"
+              size="icon"
               className={cn("rounded-full", isSaved ? "text-destructive" : "text-muted-foreground")}
               onClick={() => setIsSaved(!isSaved)}
             >
@@ -48,7 +46,7 @@ export function PurchaseCard({ motorcycle }: PurchaseCardProps) {
           <span className="text-4xl font-black tracking-tighter gradient-text-static">{formattedPrice}</span>
           {motorcycle.originalPrice && (
             <span className="text-lg text-muted-foreground line-through decoration-destructive/50">
-              ${motorcycle.originalPrice.toLocaleString()}
+              {formatPrice(motorcycle.originalPrice)}
             </span>
           )}
         </div>
@@ -67,24 +65,24 @@ export function PurchaseCard({ motorcycle }: PurchaseCardProps) {
                 onClick={() => setSelectedColor(color)}
                 className={cn(
                   "relative w-12 h-12 rounded-full border-2 transition-all overflow-hidden",
-                  selectedColor === color 
-                    ? "border-primary ring-2 ring-primary/20 ring-offset-2 ring-offset-background scale-110" 
+                  selectedColor === color
+                    ? "border-primary ring-2 ring-primary/20 ring-offset-2 ring-offset-background scale-110"
                     : "border-border/50 hover:border-primary/50"
                 )}
                 aria-label={`Select ${color}`}
               >
                 {/* Simulated color circles using CSS since we don't have exact hex codes in the mock data */}
-                <div 
-                  className="absolute inset-0 opacity-80" 
-                  style={{ 
-                    backgroundColor: color.toLowerCase().includes('black') ? '#1e293b' : 
-                                     color.toLowerCase().includes('white') ? '#f8fafc' : 
-                                     color.toLowerCase().includes('red') ? '#ef4444' : 
-                                     color.toLowerCase().includes('blue') ? '#3b82f6' : 
-                                     color.toLowerCase().includes('green') ? '#10b981' : 
-                                     color.toLowerCase().includes('grey') || color.toLowerCase().includes('titanium') ? '#64748b' : 
-                                     color.toLowerCase().includes('yellow') ? '#eab308' : '#8b5cf6'
-                  }} 
+                <div
+                  className="absolute inset-0 opacity-80"
+                  style={{
+                    backgroundColor: color.toLowerCase().includes('black') ? '#1e293b' :
+                      color.toLowerCase().includes('white') ? '#f8fafc' :
+                        color.toLowerCase().includes('red') ? '#ef4444' :
+                          color.toLowerCase().includes('blue') ? '#3b82f6' :
+                            color.toLowerCase().includes('green') ? '#10b981' :
+                              color.toLowerCase().includes('grey') || color.toLowerCase().includes('titanium') ? '#64748b' :
+                                color.toLowerCase().includes('yellow') ? '#eab308' : '#8b5cf6'
+                  }}
                 />
                 {selectedColor === color && (
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -99,7 +97,7 @@ export function PurchaseCard({ motorcycle }: PurchaseCardProps) {
         <Separator className="bg-border/50" />
 
         <div className="space-y-4">
-          <Button 
+          <Button
             className="w-full h-14 text-lg font-bold rounded-xl shadow-glow transition-all hover:scale-[1.02]"
             onClick={() => {
               addItem({ motorcycleId: motorcycle.id, color: selectedColor, quantity: 1 });

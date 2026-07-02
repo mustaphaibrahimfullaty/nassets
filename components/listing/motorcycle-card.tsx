@@ -8,6 +8,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Star, Zap, Gauge, Battery } from "lucide-react";
 
+import { formatPrice } from "@/services/motorcycle-service";
+
 interface MotorcycleCardProps {
   motorcycle: Motorcycle;
 }
@@ -15,19 +17,9 @@ interface MotorcycleCardProps {
 export function MotorcycleCard({ motorcycle }: MotorcycleCardProps) {
   const { slug, name, thumbnail, price, originalPrice, isNew, isFeatured, rating, reviewCount, specs, tags } = motorcycle;
 
-  const formattedPrice = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    maximumFractionDigits: 0,
-  }).format(price);
+  const formattedPrice = formatPrice(price);
 
-  const formattedOriginalPrice = originalPrice
-    ? new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      maximumFractionDigits: 0,
-    }).format(originalPrice)
-    : null;
+  const formattedOriginalPrice = originalPrice ? formatPrice(originalPrice) : null;
 
   return (
     <Card className="group flex flex-col overflow-hidden border-border/50 bg-card/50 transition-all hover:border-primary/50 card-hover-lift pt-0">

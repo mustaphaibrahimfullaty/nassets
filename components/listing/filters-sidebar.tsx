@@ -9,6 +9,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MotorcycleCategory } from "@/types";
 
+import { formatPrice } from "@/services/motorcycle-service";
+
 export interface FilterState {
   categories: MotorcycleCategory[];
   priceRange: [number, number];
@@ -118,13 +120,13 @@ export function FiltersSidebar({
               defaultValue={[0, maxPrice]}
               value={[filters.priceRange[0], filters.priceRange[1]]}
               max={maxPrice}
-              step={100}
+              step={50000}
               onValueChange={handlePriceChange}
               className="mt-6"
             />
             <div className="flex items-center justify-between mt-4 text-xs font-medium text-muted-foreground">
-              <span>₦{filters.priceRange[0].toLocaleString()}</span>
-              <span>₦{filters.priceRange[1].toLocaleString()}</span>
+              <span>{formatPrice(filters.priceRange[0])}</span>
+              <span>{formatPrice(filters.priceRange[1])}</span>
             </div>
           </AccordionContent>
         </AccordionItem>
