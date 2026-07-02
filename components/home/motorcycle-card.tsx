@@ -13,7 +13,7 @@ interface MotorcycleCardProps {
 export function MotorcycleCard({ motorcycle }: MotorcycleCardProps) {
   return (
     <div className="group flex flex-col bg-card rounded-2xl border border-border overflow-hidden card-hover-lift h-full relative">
-      
+
       {/* Badges */}
       <div className="absolute top-4 left-4 z-10 flex flex-col gap-2">
         {motorcycle.isNew && (
@@ -31,8 +31,8 @@ export function MotorcycleCard({ motorcycle }: MotorcycleCardProps) {
       </div>
 
       {/* Image container - using div with bg color for placeholder since no images exist yet */}
-      <Link href={`/motorcycles/${motorcycle.slug}`} className="block relative aspect-[4/3] w-full overflow-hidden bg-muted flex-shrink-0">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-0" />
+      <Link href={`/motorcycles/${motorcycle.slug}`} className="block relative aspect-4/3 w-full overflow-hidden bg-muted shrink-0">
+        <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent z-0" />
         <Image
           src={motorcycle.thumbnail}
           alt={motorcycle.name}
@@ -40,7 +40,7 @@ export function MotorcycleCard({ motorcycle }: MotorcycleCardProps) {
           className="object-cover transition-transform duration-500 group-hover:scale-110"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        
+
         {/* Category Badge - bottom left of image */}
         <div className="absolute bottom-3 left-3 z-10">
           <Badge variant="secondary" className="capitalize bg-background/80 backdrop-blur-md text-xs">
@@ -88,7 +88,7 @@ export function MotorcycleCard({ motorcycle }: MotorcycleCardProps) {
               <div className="text-xs text-muted-foreground line-through">{formatPrice(motorcycle.originalPrice)}</div>
             )}
           </div>
-          
+
           <div className="flex gap-2">
             <Button size="icon" variant="outline" className="rounded-full w-[36px] h-[36px] border-border hover:border-primary hover:text-primary transition-colors">
               <ShoppingBag className="w-4 h-4" />

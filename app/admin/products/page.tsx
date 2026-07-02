@@ -32,7 +32,7 @@ export default function AdminProductsPage() {
                     </div>
                   </TableCell>
                   <TableCell className="capitalize">{motorcycle.category}</TableCell>
-                  <TableCell>${motorcycle.price.toLocaleString()}</TableCell>
+                  <TableCell>₦{motorcycle.price.toLocaleString()}</TableCell>
                   <TableCell><Badge variant={motorcycle.inStock ? "secondary" : "outline"}>{motorcycle.inStock ? "In stock" : "Limited"}</Badge></TableCell>
                   <TableCell><div className="flex gap-2">{motorcycle.isFeatured ? <Badge>Featured</Badge> : null}{motorcycle.isNew ? <Badge variant="outline">New</Badge> : null}</div></TableCell>
                 </TableRow>

@@ -15,21 +15,21 @@ const orders = [
     date: "2026-06-28",
     product: "Nassets Quantum",
     status: "Processing",
-    total: "$15,000",
+    total: "₦15,000",
   },
   {
     id: "ORD-2920",
     date: "2026-06-15",
     product: "Nassets Explorer",
     status: "Processing",
-    total: "$12,500",
+    total: "₦12,500",
   },
   {
     id: "ORD-2810",
     date: "2026-05-02",
     product: "Nassets Genesis",
     status: "Delivered",
-    total: "$18,000",
+    total: "₦18,000",
   },
 ]
 
@@ -62,7 +62,7 @@ export default function OrdersPage() {
                 <TableCell>{order.date}</TableCell>
                 <TableCell>{order.product}</TableCell>
                 <TableCell>
-                  <Badge 
+                  <Badge
                     variant={order.status === "Delivered" ? "default" : "secondary"}
                   >
                     {order.status}

@@ -103,7 +103,7 @@ export default function AdminAnalyticsPage() {
                   <TableCell>{order.customer}</TableCell>
                   <TableCell>{order.model}</TableCell>
                   <TableCell><Badge variant="secondary">{order.status}</Badge></TableCell>
-                  <TableCell className="text-right">${order.total.toLocaleString()}</TableCell>
+                  <TableCell className="text-right">₦{order.total.toLocaleString()}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

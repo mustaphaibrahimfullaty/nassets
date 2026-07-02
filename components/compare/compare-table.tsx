@@ -22,7 +22,7 @@ export function CompareTable({ motorcycles }: CompareTableProps) {
   const { removeMotorcycle } = useCompareStore();
 
   const specsRows = [
-    { label: "Price", key: "price", format: (v: number) => `$${v.toLocaleString()}` },
+    { label: "Price", key: "price", format: (v: number) => `₦${v.toLocaleString()}` },
     { label: "Range", key: "specs.range" },
     { label: "Top Speed", key: "specs.topSpeed" },
     { label: "0-60 mph", key: "specs.zeroToSixty" },

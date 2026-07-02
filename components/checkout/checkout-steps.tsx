@@ -48,7 +48,7 @@ export function CheckoutSteps() {
       {/* Step Indicator */}
       <div className="flex items-center justify-between relative">
         <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-muted rounded-full -z-10" />
-        <div 
+        <div
           className="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-primary rounded-full -z-10 transition-all duration-300"
           style={{ width: `${((currentStep - 1) / 3) * 100}%` }}
         />
@@ -57,12 +57,11 @@ export function CheckoutSteps() {
           const isActive = currentStep >= step.id;
           return (
             <div key={step.id} className="flex flex-col items-center gap-2 bg-background p-2">
-              <div 
-                className={`w-10 h-10 rounded-full flex items-center justify-center border-2 transition-colors duration-300 ${
-                  isActive 
-                    ? "bg-primary border-primary text-primary-foreground" 
-                    : "bg-muted border-muted text-muted-foreground"
-                }`}
+              <div
+                className={`w-10 h-10 rounded-full flex items-center justify-center border-2 transition-colors duration-300 ${isActive
+                  ? "bg-primary border-primary text-primary-foreground"
+                  : "bg-muted border-muted text-muted-foreground"
+                  }`}
               >
                 <Icon className="w-5 h-5" />
               </div>
@@ -95,11 +94,11 @@ export function CheckoutSteps() {
                           <p className="text-sm text-muted-foreground">{item.motorcycle.brand}</p>
                           <p className="text-sm mt-1">Color: <span className="font-medium capitalize">{item.color}</span></p>
                         </div>
-                        <span className="font-bold text-lg">$\{(item.motorcycle.price * item.quantity).toLocaleString()}</span>
+                        <span className="font-bold text-lg">₦\{(item.motorcycle.price * item.quantity).toLocaleString()}</span>
                       </div>
                       <div className="flex items-center justify-between mt-4">
                         <div className="flex items-center gap-3 bg-background border border-border/50 rounded-full p-1">
-                          <Button 
+                          <Button
                             variant="ghost" size="icon" className="h-8 w-8 rounded-full"
                             onClick={() => updateQuantity(item.motorcycleId, item.color, item.quantity - 1)}
                             disabled={item.quantity <= 1}
@@ -107,14 +106,14 @@ export function CheckoutSteps() {
                             <Minus className="h-4 w-4" />
                           </Button>
                           <span className="w-4 text-center font-medium">{item.quantity}</span>
-                          <Button 
+                          <Button
                             variant="ghost" size="icon" className="h-8 w-8 rounded-full"
                             onClick={() => updateQuantity(item.motorcycleId, item.color, item.quantity + 1)}
                           >
                             <Plus className="h-4 w-4" />
                           </Button>
                         </div>
-                        <Button 
+                        <Button
                           variant="ghost" size="icon" className="text-red-500 hover:text-red-600 hover:bg-red-500/10"
                           onClick={() => removeItem(item.motorcycleId, item.color)}
                         >
@@ -213,8 +212,8 @@ export function CheckoutSteps() {
           {/* Navigation Buttons (for steps 1-3) */}
           {currentStep < 4 && (
             <div className="flex justify-between mt-6">
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 onClick={handleBack}
                 disabled={currentStep === 1}
               >
@@ -237,20 +236,20 @@ export function CheckoutSteps() {
             <CardContent className="space-y-4">
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Subtotal ({items.reduce((acc, i) => acc + i.quantity, 0)} items)</span>
-                <span>${total.toLocaleString()}</span>
+                <span>₦{total.toLocaleString()}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Shipping (Freight)</span>
-                <span>$499</span>
+                <span>₦499</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Estimated Tax</span>
-                <span>${(total * 0.08).toLocaleString()}</span>
+                <span>₦{(total * 0.08).toLocaleString()}</span>
               </div>
               <Separator className="my-4" />
               <div className="flex justify-between text-xl font-bold">
                 <span>Total</span>
-                <span className="text-primary">${(total + 499 + (total * 0.08)).toLocaleString()}</span>
+                <span className="text-primary">₦{(total + 499 + (total * 0.08)).toLocaleString()}</span>
               </div>
             </CardContent>
             {currentStep < 3 && (

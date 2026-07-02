@@ -123,8 +123,8 @@ export function FiltersSidebar({
               className="mt-6"
             />
             <div className="flex items-center justify-between mt-4 text-xs font-medium text-muted-foreground">
-              <span>${filters.priceRange[0].toLocaleString()}</span>
-              <span>${filters.priceRange[1].toLocaleString()}</span>
+              <span>₦{filters.priceRange[0].toLocaleString()}</span>
+              <span>₦{filters.priceRange[1].toLocaleString()}</span>
             </div>
           </AccordionContent>
         </AccordionItem>

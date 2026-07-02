@@ -5,7 +5,7 @@ import { users } from "@/data/users"
 export const adminMetrics = [
   {
     label: "Gross demo revenue",
-    value: "$418.6K",
+    value: "₦85.1M",
     trend: "+18.4%",
     detail: "Mock revenue across reservations and deposits",
   },
