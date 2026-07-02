@@ -66,7 +66,7 @@ export function HeroSection() {
           <div className="relative h-[400px] lg:h-[600px] w-full animate-fade-in-up-delay-2">
             <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-accent-violet/20 rounded-3xl glow-border backdrop-blur-sm overflow-hidden animate-float">
               <Image
-                src="/images/motorcycles/apex-x-1.jpg"
+                src="/images/motorcycles/scooter-side-view.png"
                 alt="Apex X-1"
                 fill
                 className="object-cover"
